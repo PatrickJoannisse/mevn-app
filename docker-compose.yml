@@ -5,8 +5,8 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile
-    image: myapp-server
-    container_name: myapp-node-server
+    image: mevn-server
+    container_name: mevn-server
     command: /usr/src/app/node_modules/.bin/nodemon server.js
     volumes:
       - ./api/:/usr/src/app
@@ -32,8 +32,8 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: myapp-client
-    container_name: myapp-react-client
+    image: mevn-client
+    container_name: mevn-client
     command: yarn serve
     volumes:
       - ./client/:/usr/app
